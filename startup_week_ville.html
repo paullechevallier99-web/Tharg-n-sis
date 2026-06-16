@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thargénésis</title>
+<script src="script.js" defer></script>
+<link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo" id="nav-name"><img src="photo/fondbl.png" height=15px width=15px class="nav-log"/> THARGÉNÉSIS</div>
+  <div class="nav-links">
+    <a onclick="s('identity')">Identité</a>
+    <a onclick="s('population')">Population</a>
+    <a onclick="s('infra')">Infrastructures</a>
+    <a onclick="s('services')">Services</a>
+    <a onclick="s('mairie')">Mairie</a>
+    <a onclick="s('com')">Communication</a>
+  </div>
+</nav>
+
+<section id="hero">
+  <div id="hero-bg"></div>
+  <div id="hero-overlay"></div>
+  <div class="hero-content">
+    <img src="photo/Logocolor.png" class="hero-logo"/>
+    <div class="hero-tag">Ville · Start Up Week 2026 · E2SE</div>
+    <div class="hero-name" id="h-name">THARGÉNÉSIS</div>
+    <div class="hero-slogan" id="h-slogan">« L'avenir, on le bâtit ensemble »</div>
+    <div class="hero-desc" id="h-desc">Une ville nouvelle, innovante et durable, pensée pour 15 000 habitants. Alliant technologie, nature et qualité de vie, Thargénésis redéfinit l'art de vivre en ville sur Mars.</div>
+    <div class="hero-tags" id="h-tags">
+      <span class="htag">🌱 Écologique</span>
+      <span class="htag">💡 Innovante</span>
+      <span class="htag">🤝 Inclusive</span>
+      <span class="htag">🚲 Mobilité douce</span>
+    </div>
+  </div>
+  <div class="hero-scroll"><span class="scroll-line"></span>EXPLORER</div>
+</section>
+
+<section id="stats">
+  <div class="stats-grid">
+    <div class="stat"><div class="stat-n" id="s1v">15 000</div><div class="stat-l" id="s1l">Habitants</div></div>
+    <div class="stat"><div class="stat-n" id="s2v">2 Mds €</div><div class="stat-l" id="s2l">Budget</div></div>
+    <div class="stat"><div class="stat-n" id="s3v">2026</div><div class="stat-l" id="s3l">Fondation</div></div>
+    <div class="stat"><div class="stat-n" id="s4v">45%</div><div class="stat-l" id="s4l">Espaces verts</div></div>
+    <div class="stat"><div class="stat-n" id="s5v">3 800</div><div class="stat-l" id="s5l">Ménages</div></div>
+  </div>
+</section>
+
+<section id="identity">
+  <div>
+    <div class="section-label">Identité de la ville</div>
+    <div class="section-title" id="id-title">Une ville pensée pour l'humain et la planète</div>
+    <div class="section-text" id="id-text">Thargénésis est une ville innovante orientée vers la qualité de vie, la durabilité et l'inclusion. Inspirée des modèles scandinaves, elle place le citoyen au cœur de chaque décision. Thème : smart city verte, connectée et solidaire.</div>
+    <div class="values-grid">
+      <div class="val-card"><div class="val-icon">🌿</div><div class="val-name">Durabilité</div><div class="val-desc">Énergies renouvelables, gestion des déchets, urbanisme durable</div></div>
+      <div class="val-card"><div class="val-icon">💡</div><div class="val-name">Innovation</div><div class="val-desc">Smart city, incubateur, bâtiments connectés</div></div>
+      <div class="val-card"><div class="val-icon">🏠</div><div class="val-name">Accessibilité</div><div class="val-desc">Logements pour tous, mixité sociale</div></div>
+      <div class="val-card"><div class="val-icon">🤝</div><div class="val-name">Inclusion</div><div class="val-desc">Services publics adaptés à tous les profils</div></div>
+    </div>
+  </div>
+  <div class="identity-visual">
+    <div class="section-label" style="margin-bottom:0">Identité visuelle & positionnement</div>
+    <div class="branding-row">
+      <span class="branding-label">Couleur 1</span>
+      <div class="color-swatch" id="swatch1" style="background:#282E69"></div>
+      <span class="style-badge" id="style-badge">Innovation et confiance</span>
+    </div>
+    <div class="branding-row">
+      <span class="branding-label">Couleur 2</span>
+      <div class="color-swatch" id="swatch2" style="background:#5AB46C"></div>
+      <span class="style-badge" id="style-badge">Nature et durabilité</span>
+    </div>
+    <div class="branding-row">
+      <span class="branding-label">Couleur 3</span>
+      <div class="color-swatch" id="swatch2" style="background: #D26C59"></div>
+      <span class="style-badge" id="style-badge">Énergie et vie urbaine</span>
+    </div>
+    <div>
+      <div class="section-label" style="margin-bottom:8px">Cibles principales</div>
+      <div class="target-chips" id="targets">
+        <span class="chip">Familles</span><span class="chip">Jeunes actifs</span><span class="chip">Seniors</span><span class="chip">Entrepreneurs</span><span class="chip">Chercheurs</span>
+      </div>
+    </div>
+    <div>
+      <div class="section-label" style="margin-bottom:6px">Benchmark — villes d'inspiration</div>
+      <div style="font-size:13px;color:#666" id="benchmark-txt"> Amaravati, Singapour (Innovante, Durable, Connectée, Humaine)</div>
+    </div>
+    <div>
+      <div class="section-label" style="margin-bottom:6px">Jumelage Interplanétaire</div>
+      <div style="font-size:13px;color:#666" id="jumelage-txt">🌍 Singapour - Échange de technologies urbaines, coopération scientifiques, gestion des ressources en environnement contraint </div>
+    </div>
+  </div>
+</section>
+
+<section id="population">
+  <div class="section-label">Profil des habitants</div>
+  <div class="section-title" style="color:#fff" id="pop-title">Qui sont les Thargénésisien ?</div>
+  <div class="pop-grid">
+    <div class="pop-card">
+      <h4>Répartition par âge</h4>
+      <div class="pop-row"><span class="pop-row-label">0 – 17 ans</span><span class="pop-row-val">18%</span></div>
+      <div class="pop-bar"><div class="pop-fill" style="width:18%"></div></div>
+      <div class="pop-row"><span class="pop-row-label">18 – 29 ans</span><span class="pop-row-val">22%</span></div>
+      <div class="pop-bar"><div class="pop-fill" style="width:22%"></div></div>
+      <div class="pop-row"><span class="pop-row-label">30 – 44 ans</span><span class="pop-row-val">20%</span></div>
+      <div class="pop-bar"><div class="pop-fill" style="width:20%"></div></div>
+      <div class="pop-row"><span class="pop-row-label">45 – 59 ans</span><span class="pop-row-val">19%</span></div>
+      <div class="pop-bar"><div class="pop-fill" style="width:19%"></div></div>
+      <div class="pop-row"><span class="pop-row-label">60 ans +</span><span class="pop-row-val">21%</span></div>
+      <div class="pop-bar"><div class="pop-fill" style="width:21%"></div></div>
+    </div>
+    <div class="pop-card">
+      <h4>Catégories socio-professionnelles</h4>
+      <div class="pop-row"><span class="pop-row-label">Cadres / Sup.</span><span class="pop-row-val">18%</span></div>
+      <div class="pop-bar"><div class="pop-fill" style="width:18%"></div></div>
+      <div class="pop-row"><span class="pop-row-label">Prof. intermédiaires</span><span class="pop-row-val">26%</span></div>
+      <div class="pop-bar"><div class="pop-fill" style="width:26%"></div></div>
+      <div class="pop-row"><span class="pop-row-label">Employés</span><span class="pop-row-val">28%</span></div>
+      <div class="pop-bar"><div class="pop-fill" style="width:28%"></div></div>
+      <div class="pop-row"><span class="pop-row-label">Ouvriers</span><span class="pop-row-val">15%</span></div>
+      <div class="pop-bar"><div class="pop-fill" style="width:15%"></div></div>
+      <div class="pop-row"><span class="pop-row-label">Indépendants</span><span class="pop-row-val">5%</span></div>
+      <div class="pop-bar"><div class="pop-fill" style="width:5%"></div></div>
+      <div class="pop-row"><span class="pop-row-label">Sans activité</span><span class="pop-row-val">8%</span></div>
+      <div class="pop-bar"><div class="pop-fill" style="width:8%"></div></div>
+    </div>
+    <div class="pop-card">
+      <h4>Situation familiale & mobilité</h4>
+      <div class="pop-row"><span class="pop-row-label">Célibataires</span><span class="pop-row-val">35%</span></div>
+      <div class="pop-row"><span class="pop-row-label">Couples sans enfant</span><span class="pop-row-val">20%</span></div>
+      <div class="pop-row"><span class="pop-row-label">Couples avec enfants</span><span class="pop-row-val">35%</span></div>
+      <div class="pop-row"><span class="pop-row-label">Monoparentales</span><span class="pop-row-val">10%</span></div>
+      <div style="margin-top:12px;padding-top:10px;border-top:0.5px solid #2a2a2a">
+        <div class="pop-row"><span class="pop-row-label">Revenu moyen</span><span class="pop-row-val">2 100 €/mois</span></div>
+        <div class="pop-row"><span class="pop-row-label">Panier mensuel</span><span class="pop-row-val">1 250 €</span></div>
+        <div class="pop-row"><span class="pop-row-label">Voiture</span><span class="pop-row-val">60%</span></div>
+        <div class="pop-row"><span class="pop-row-label">Transports commun</span><span class="pop-row-val">25%</span></div>
+        <div class="pop-row"><span class="pop-row-label">Vélo / marche</span><span class="pop-row-val">15%</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="infra">
+  <div class="section-label">Organisation & budget</div>
+  <div class="section-title">Les infrastructures de Thargénésis</div>
+  <div class="infra-cats">
+    <div class="infra-cat">
+      <div class="infra-cat-icon">🏠</div>
+      <div class="infra-cat-name">Logements</div>
+      <div class="infra-item"><span class="infra-item-name">Maisons individuelles (×50)</span><span class="infra-item-price">12,5 M€</span></div>
+      <div class="infra-item"><span class="infra-item-name">Immeubles collectifs (×30)</span><span class="infra-item-price">105 M€</span></div>
+      <div class="infra-item"><span class="infra-item-name">Résidences sociales (×5)</span><span class="infra-item-price">10 M€</span></div>
+      <div class="infra-item"><span class="infra-item-name">Résidence étudiante</span><span class="infra-item-price">4 M€</span></div>
+    </div>
+    <div class="infra-cat">
+      <div class="infra-cat-icon">🎓</div>
+      <div class="infra-cat-name">Éducation</div>
+      <div class="infra-item"><span class="infra-item-name">École maternelle</span><span class="infra-item-price">3 M€</span></div>
+      <div class="infra-item"><span class="infra-item-name">École primaire</span><span class="infra-item-price">5 M€</span></div>
+      <div class="infra-item"><span class="infra-item-name">Collège</span><span class="infra-item-price">25 M€</span></div>
+      <div class="infra-item"><span class="infra-item-name">Université</span><span class="infra-item-price">120 M€</span></div>
+    </div>
+    <div class="infra-cat">
+      <div class="infra-cat-icon">🚌</div>
+      <div class="infra-cat-name">Transports</div>
+      <div class="infra-item"><span class="infra-item-name">Réseau de bus</span><span class="infra-item-price">40 M€</span></div>
+      <div class="infra-item"><span class="infra-item-name">Tramway 3 km</span><span class="infra-item-price">30 M€</span></div>
+      <div class="infra-item"><span class="infra-item-name">Gare ferroviaire</span><span class="infra-item-price">70 M€</span></div>
+      <div class="infra-item"><span class="infra-item-name">Pistes cyclables 10 km</span><span class="infra-item-price">10 M€</span></div>
+    </div>
+    <div class="infra-cat">
+      <div class="infra-cat-icon">🏩</div>
+      <div class="infra-cat-name">Santé</div>
+      <div class="infra-item"><span class="infra-item-name">Hôpital général</span><span class="infra-item-price">150 M€</span></div>
+      <div class="infra-item"><span class="infra-item-name">Centre médical</span><span class="infra-item-price">8 M€</span></div>
+      <div class="infra-item"><span class="infra-item-name">Pôle de Santé spécialisé</span><span class="infra-item-price">200 M€</span></div>
+    </div>
+    <div class="infra-cat">
+      <div class="infra-cat-icon">⚽</div>
+      <div class="infra-cat-name">Sports & Culture</div>
+      <div class="infra-item"><span class="infra-item-name">Grand parc naturel</span><span class="infra-item-price">50 M€</span></div>
+      <div class="infra-item"><span class="infra-item-name">Centre culturel</span><span class="infra-item-price">30 M€</span></div>
+      <div class="infra-item"><span class="infra-item-name">Complexe sportif</span><span class="infra-item-price">25 M€</span></div>
+    </div>
+    <div class="infra-cat">
+      <div class="infra-cat-icon">🌳</div>
+      <div class="infra-cat-name">Environnement et Espace vert</div>
+      <div class="infra-item"><span class="infra-item-name">Centrale renouvelable</span><span class="infra-item-price">120 M€</span></div>
+      <div class="infra-item"><span class="infra-item-name">Grand parc naturel</span><span class="infra-item-price">50 M€</span></div>
+      <div class="infra-item"><span class="infra-item-name">Parc urbain</span><span class="infra-item-price">10 M€</span></div>
+      <div class="infra-item"><span class="infra-item-name">Jardin de quartier</span><span class="infra-item-price">2 M€</span></div>
+      <div class="infra-item"><span class="infra-item-name">Complexe sportif</span><span class="infra-item-price">25 M€</span></div>
+    </div>
+    <div class="infra-cat">
+      <div class="infra-cat-icon">🏛️</div>
+      <div class="infra-cat-name">Administration et Services publiques</div>
+      <div class="infra-item"><span class="infra-item-name">Mairie Centrale</span><span class="infra-item-price">15 M€</span></div>
+      <div class="infra-item"><span class="infra-item-name">Caserne de pompier</span><span class="infra-item-price">10 M€</span></div>
+      <div class="infra-item"><span class="infra-item-name">Comissariat de Police</span><span class="infra-item-price">12 M€</span></div>
+      <div class="infra-item"><span class="infra-item-name">Centre administratif</span><span class="infra-item-price">25 M€</span></div>
+      <div class="infra-item"><span class="infra-item-name">Banque</span><span class="infra-item-price">25 M€</span></div>
+
+    </div>
+    <div class="infra-cat">
+      <div class="infra-cat-icon">🌱</div>
+      <div class="infra-cat-name">Agriculture</div>
+      <div class="infra-item"><span class="infra-item-name">Mairie Centrale</span><span class="infra-item-price">15 M€</span></div>
+      <div class="infra-item"><span class="infra-item-name">Caserne  pompier</span><span class="infra-item-price">10 M€</span></div>
+
+    </div>
+  </div>
+  <div class="budget-total">
+    <div><div class="budget-label">Budget total alloué</div><div class="budget-amount">2 000 000 000 €</div></div>
+    <div style="text-align:right"><div class="budget-label">Budget restant estimé</div><div class="budget-remain">~ 1 302 500 000 € disponibles</div></div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="section-label">Services économiques</div>
+  <div class="section-title">Les acteurs privés de la ville</div>
+  <div class="services-grid">
+    <div class="svc-card">
+      <div class="svc-icon">🏦</div>
+      <div class="svc-name" id="bank-name">ThargénésisBanque</div>
+      <div class="svc-type">Agence bancaire</div>
+      <div class="svc-desc" id="bank-desc">Banque mutualiste locale orientée accessibilité et innovation. Accompagne familles, entrepreneurs et entreprises.</div>
+      <div class="svc-offers"><div class="svc-offer">💳 Comptes & moyens de paiement</div><div class="svc-offer">🏠 Crédits immobiliers</div><div class="svc-offer">💰 Épargne & placements</div><div class="svc-offer">📱 Services bancaires digitaux</div></div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">🛡️</div>
+      <div class="svc-name" id="assur-name">ThargénésisAssurance</div>
+      <div class="svc-type">Agence d'assurance</div>
+      <div class="svc-desc" id="assur-desc">Agence généraliste couvrant tous les besoins des habitants et des professionnels de la ville.</div>
+      <div class="svc-offers"><div class="svc-offer">🏠 Assurance habitation</div><div class="svc-offer">🚗 Auto & mobilité</div><div class="svc-offer">❤️ Santé & prévoyance</div><div class="svc-offer">💼 Multirisque pro</div></div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">🏡</div>
+      <div class="svc-name" id="immo-name">Thargénésimmo</div>
+      <div class="svc-type">Agence immobilière</div>
+      <div class="svc-desc" id="immo-desc">Agence spécialisée dans le neuf et l'investissement locatif, accompagnant primo-accédants et investisseurs.</div>
+      <div class="svc-offers"><div class="svc-offer">🔑 Achat & vente</div><div class="svc-offer">📋 Location & gestion locative</div><div class="svc-offer">📊 Conseil investissement</div><div class="svc-offer">🖥️ Visites virtuelles 360°</div></div>
+    </div>
+    <div class="svc-card">
+      <div class="svc-icon">🛒</div>
+      <div class="svc-name" id="super-name">ThargénésisMarché</div>
+      <div class="svc-type">Supermarché</div>
+      <div class="svc-desc" id="super-desc">Supermarché de proximité premium orienté local et bio, avec drive et livraison à domicile.</div>
+      <div class="svc-offers"><div class="svc-offer">🌿 Produits bio & locaux</div><div class="svc-offer">🚗 Drive & click&collect</div><div class="svc-offer">🚚 Livraison à domicile</div><div class="svc-offer">📱 Application fidélité</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="mairie">
+  <div class="section-label">Administration publique</div>
+  <div class="section-title" id="mairie-title">La Mairie de Thargénésis</div>
+  <div class="mairie-grid">
+    <div class="mairie-services">
+      <div class="mairie-svc"><div class="mairie-svc-icon">📋</div><div><div class="mairie-svc-name">État civil</div><div class="mairie-svc-desc">Naissances, mariages, décès, documents administratifs</div></div></div>
+      <div class="mairie-svc"><div class="mairie-svc-icon">🏗️</div><div><div class="mairie-svc-name">Urbanisme</div><div class="mairie-svc-desc">Permis de construire, voirie, espaces publics</div></div></div>
+      <div class="mairie-svc"><div class="mairie-svc-icon">🌱</div><div><div class="mairie-svc-name">Environnement</div><div class="mairie-svc-desc">Déchets, éclairage, propreté urbaine</div></div></div>
+      <div class="mairie-svc"><div class="mairie-svc-icon">🤝</div><div><div class="mairie-svc-name">Action sociale</div><div class="mairie-svc-desc">Aide aux personnes âgées, logement social, solidarité</div></div></div>
+      <div class="mairie-svc"><div class="mairie-svc-icon">🎭</div><div><div class="mairie-svc-name">Culture & Sport</div><div class="mairie-svc-desc">Médiathèque, équipements sportifs, événements</div></div></div>
+      <div class="mairie-svc"><div class="mairie-svc-icon">🔒</div><div><div class="mairie-svc-name">Sécurité</div><div class="mairie-svc-desc">Police municipale, pompiers, sécurité des bâtiments</div></div></div>
+    </div>
+    <div class="mairie-info">
+      <div class="mairie-info-block"><div class="mairie-info-label">Maire</div><div class="mairie-info-value" id="maire-name">Marie Lecomte</div></div>
+      <div class="mairie-info-block"><div class="mairie-info-label">Type de collectivité</div><div class="mairie-info-value" id="maire-type">Mairie centrale avec antennes de quartier</div></div>
+      <div class="mairie-info-block"><div class="mairie-info-label">Emplacement</div><div class="mairie-info-value" id="maire-loc">Centre-ville, Place de la République</div></div>
+      <div class="mairie-info-block"><div class="mairie-info-label">Innovation</div><div class="mairie-info-value" id="maire-innov">100% dématérialisée — démarches en ligne, guichet unique numérique</div></div>
+      <div class="mairie-info-block"><div class="mairie-info-label">Partenariats</div><div class="mairie-info-value" id="maire-partners">ThargénésisBanque · ThargénésisAssurance · Associations locales · Entreprises</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="com">
+  <div class="section-label">Communication & Attractivité</div>
+  <div class="section-title">Attirer talents, chercheurs et futurs citoyens</div>
+
+  <div class="com-grid">
+    <div>
+
+      <div class="com-block">
+        <h4>Persona cœur de cible</h4>
+        <div class="persona-card">
+          <div class="persona-name">
+            Dr. Maya Laurent, 34 ans
+          </div>
+
+          <div class="persona-desc">
+            Ingénieure en systèmes durables. Souhaite participer à la
+            construction de la première ville permanente sur Mars.
+            Recherche un environnement innovant, sécurisé et multiculturel.
+          </div>
+
+          <div class="persona-tags">
+            <span class="persona-tag">Recherche</span>
+            <span class="persona-tag">Innovation</span>
+            <span class="persona-tag">Développement durable</span>
+            <span class="persona-tag">Coopération internationale</span>
+            <span class="persona-tag">Exploration spatiale</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="com-block" style="margin-top:24px">
+        <h4>Objectifs de communication</h4>
+
+        <div class="com-item">
+          <span class="com-item-icon">🚀</span>
+          Faire connaître la première ville permanente martienne
+        </div>
+
+        <div class="com-item">
+          <span class="com-item-icon">👨‍🔬</span>
+          Attirer chercheurs, ingénieurs et entrepreneurs
+        </div>
+
+        <div class="com-item">
+          <span class="com-item-icon">🏛️</span>
+          Valoriser la coopération entre gouvernements partenaires
+        </div>
+
+        <div class="com-item">
+          <span class="com-item-icon">🌍</span>
+          Inspirer les générations futures sur Terre et Mars
+        </div>
+      </div>
+
+    </div>
+
+    <div>
+
+      <div class="com-block">
+        <h4>Moyens digitaux</h4>
+
+        <div class="com-item">
+          <span class="com-item-icon">🌐</span>
+          Portail officiel : informations, candidatures et services citoyens
+        </div>
+
+        <div class="com-item">
+          <span class="com-item-icon">📡</span>
+          Flux vidéo en direct depuis Mars
+        </div>
+
+        <div class="com-item">
+          <span class="com-item-icon">🎥</span>
+          Série documentaire sur la vie quotidienne martienne
+        </div>
+
+        <div class="com-item">
+          <span class="com-item-icon">📱</span>
+          Réseaux sociaux multilingues et visites virtuelles immersives
+        </div>
+      </div>
+
+      <div class="com-block" style="margin-top:20px">
+        <h4>Moyens institutionnels</h4>
+
+        <div class="com-item">
+          <span class="com-item-icon">🏛️</span>
+          Communication coordonnée des gouvernements partenaires
+        </div>
+
+        <div class="com-item">
+          <span class="com-item-icon">🎓</span>
+          Partenariats avec universités et centres de recherche
+        </div>
+
+        <div class="com-item">
+          <span class="com-item-icon">🌐</span>
+          Présence dans les salons internationaux de l'innovation
+        </div>
+      </div>
+
+      <div class="com-block" style="margin-top:20px">
+        <h4>Événement inaugural</h4>
+
+        <div class="com-item">
+          <span class="com-item-icon">🎉</span>
+          Mars Settlement Day : retransmission Terre-Mars,
+          conférences scientifiques, concerts et ouverture des premiers quartiers
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<footer>
+  <div>
+    <div class="footer-brand" id="footer-name">Thargénésis</div>
+    <div class="footer-tagline" id="footer-tagline">L'avenir, on le bâtit ensemble · Start Up Week 2026 · E2SE</div>
+  </div>
+  <div class="footer-meta">Projet fictif · BTS 1ère année<br>Groupe — 10 étudiants</div>
+</footer>
+
+<!-- PANNEAU D'ÉDITION -->
+<div id="epanel">
+  <div class="ep-header">
+    <h3>✏️ Modifier le contenu</h3>
+    <button class="ep-close" onclick="togglePanel()">✕</button>
+  </div>
+  <div class="ep-body">
+    <div class="ep-section">Héros</div>
+    <div class="ep-field"><label>Nom de la ville</label><input id="e-name" value="Thargénésis"></div>
+    <div class="ep-field"><label>Slogan</label><input id="e-slogan" value="« L'avenir, on le bâtit ensemble »"></div>
+    <div class="ep-field"><label>Description</label><textarea id="e-desc">Une ville nouvelle, innovante et durable, pensée pour 10 000 habitants.</textarea></div>
+    <div class="ep-field"><label>Tags (séparés par des virgules)</label><input id="e-tags" value="🌱 Écologique,💡 Innovante,🤝 Inclusive,🚲 Mobilité douce"></div>
+
+    <div class="ep-section">Couleurs du site</div>
+    <div class="ep-2col">
+      <div class="ep-field"><label>Couleur 1</label><input type="color" id="e-c1" value="#1a3a4a"></div>
+      <div class="ep-field"><label>Couleur 2</label><input type="color" id="e-c2" value="#2d7a4a"></div>
+    </div>
+
+    <div class="ep-section">Statistiques</div>
+    <div class="ep-2col"><div class="ep-field"><label>Stat 1 val.</label><input id="e-s1v" value="15 000"></div><div class="ep-field"><label>Stat 1 libellé</label><input id="e-s1l" value="Habitants"></div></div>
+    <div class="ep-2col"><div class="ep-field"><label>Stat 2 val.</label><input id="e-s2v" value="2 Mds €"></div><div class="ep-field"><label>Stat 2 libellé</label><input id="e-s2l" value="Budget"></div></div>
+    <div class="ep-2col"><div class="ep-field"><label>Stat 3 val.</label><input id="e-s3v" value="2026"></div><div class="ep-field"><label>Stat 3 libellé</label><input id="e-s3l" value="Fondation"></div></div>
+    <div class="ep-2col"><div class="ep-field"><label>Stat 4 val.</label><input id="e-s4v" value="45%"></div><div class="ep-field"><label>Stat 4 libellé</label><input id="e-s4l" value="Espaces verts"></div></div>
+    <div class="ep-2col"><div class="ep-field"><label>Stat 5 val.</label><input id="e-s5v" value="3 800"></div><div class="ep-field"><label>Stat 5 libellé</label><input id="e-s5l" value="Ménages"></div></div>
+
+    <div class="ep-section">Identité</div>
+    <div class="ep-field"><label>Titre section identité</label><input id="e-id-title" value="Une ville pensée pour l'humain et la planète"></div>
+    <div class="ep-field"><label>Description identité</label><textarea id="e-id-text">Thargénésis est une ville innovante orientée vers la qualité de vie, la durabilité et l'inclusion.</textarea></div>
+    <div class="ep-field"><label>Style visuel</label><input id="e-style" value="Moderne & naturel"></div>
+    <div class="ep-field"><label>Cibles (séparées par virgule)</label><input id="e-targets" value="Familles,Jeunes actifs,Seniors,Entrepreneurs"></div>
+    <div class="ep-field"><label>Villes d'inspiration</label><input id="e-bench" value="Copenhague (mobilités douces), Singapour (smart city), Bordeaux"></div>
+    <div class="ep-field"><label>Jumelage international</label><input id="e-jumelage" value="🌍 Amsterdam — Mobilité durable et urbanisme vert"></div>
+
+    <div class="ep-section">Services</div>
+    <div class="ep-field"><label>Banque — Nom</label><input id="e-bank-name" value="ThargénésisBanque"></div>
+    <div class="ep-field"><label>Banque — Description</label><textarea id="e-bank-desc">Banque mutualiste locale orientée accessibilité et innovation.</textarea></div>
+    <div class="ep-field"><label>Assurance — Nom</label><input id="e-assur-name" value="ThargénésisAssurance"></div>
+    <div class="ep-field"><label>Assurance — Description</label><textarea id="e-assur-desc">Agence généraliste couvrant tous les besoins des habitants.</textarea></div>
+    <div class="ep-field"><label>Immobilier — Nom</label><input id="e-immo-name" value="ThargénésisImmo"></div>
+    <div class="ep-field"><label>Immobilier — Description</label><textarea id="e-immo-desc">Agence spécialisée dans le neuf et l'investissement locatif.</textarea></div>
+    <div class="ep-field"><label>Supermarché — Nom</label><input id="e-super-name" value="ThargénésisMarché"></div>
+    <div class="ep-field"><label>Supermarché — Description</label><textarea id="e-super-desc">Supermarché de proximité premium orienté local et bio.</textarea></div>
+
+    <div class="ep-section">Mairie</div>
+    <div class="ep-field"><label>Nom du/de la Maire</label><input id="e-maire-name" value="Marie Lecomte"></div>
+    <div class="ep-field"><label>Type de collectivité</label><input id="e-maire-type" value="Mairie centrale avec antennes de quartier"></div>
+    <div class="ep-field"><label>Emplacement mairie</label><input id="e-maire-loc" value="Centre-ville, Place de la République"></div>
+    <div class="ep-field"><label>Innovation notable</label><textarea id="e-maire-innov">100% dématérialisée — démarches en ligne, guichet unique numérique</textarea></div>
+    <div class="ep-field"><label>Partenariats clés</label><input id="e-maire-partners" value="ThargénésisBanque · ThargénésisAssurance · Associations · Entreprises"></div>
+
+    <div class="ep-section">Communication</div>
+    <div class="ep-field"><label>Persona — Nom & âge</label><input id="e-persona-name" value="Alex, 32 ans"></div>
+    <div class="ep-field"><label>Persona — Description</label><textarea id="e-persona-desc">Jeune actif urbain, CSP+, sensible à l'écologie.</textarea></div>
+    <div class="ep-field"><label>Persona — Tags (virgule)</label><input id="e-persona-tags" value="Vélo quotidien,Télétravail,Bio & local,Culture,Famille à venir"></div>
+    <div class="ep-field"><label>Site internet</label><input id="e-com-site" value="Site officiel Thargénésis.fr — vitrine & démarches en ligne"></div>
+    <div class="ep-field"><label>Réseaux sociaux</label><input id="e-com-social" value="Instagram, TikTok, LinkedIn — storytelling de la ville"></div>
+    <div class="ep-field"><label>Ambassadeur</label><input id="e-com-ambass" value="Ambassadeur : influenceur éco / personnalité locale"></div>
+    <div class="ep-field"><label>Événement inauguration</label><input id="e-com-event" value="Festival Thargénésis Day — concerts, marchés locaux, portes ouvertes"></div>
+
+    <div class="ep-section">Pied de page</div>
+    <div class="ep-field"><label>Tagline footer</label><input id="e-footer-tagline" value="L'avenir, on le bâtit ensemble · Start Up Week 2026 · E2SE"></div>
+
+    <button class="ep-apply" onclick="applyAll()">✓ Appliquer les changements</button>
+  </div>
+</div>
+
+</body>
+</html>
