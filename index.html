@@ -390,6 +390,39 @@
     </div>
   </div>
 </section>
+<section id="future">
+  <div class="section-label">Vision à long terme</div>
+  <div class="section-title">Thargénésis en 2225</div>
+
+  <div class="future-grid">
+
+    <div class="future-card">
+      <div class="future-icon">👥</div>
+      <h3>10 000 habitants</h3>
+      <p>Doublement de la population grâce à l'expansion des quartiers résidentiels.</p>
+    </div>
+
+    <div class="future-card">
+      <div class="future-icon">🌾</div>
+      <h3>Autonomie alimentaire</h3>
+      <p>Production locale de 100% des besoins alimentaires via les fermes hydroponiques.</p>
+    </div>
+
+    <div class="future-card">
+      <div class="future-icon">🎓</div>
+      <h3>Université martienne</h3>
+      <p>Centre mondial de recherche sur les technologies spatiales et la vie extraterrestre.</p>
+    </div>
+
+    <div class="future-card">
+      <div class="future-icon">🏙️</div>
+      <h3>Nouveau dôme</h3>
+      <p>Construction d'un second dôme résidentiel et économique relié au centre-ville.</p>
+    </div>
+
+  </div>
+</section>
+  
 <footer>
   <div>
     <div class="footer-brand" id="footer-name"><img class="footer-logo" src="photo/nomblanc.png" width="80px"></div>
@@ -398,70 +431,7 @@
   <div class="footer-meta">Projet fictif · BTS 1ère année<br>Groupe — 10 étudiants</div>
 </footer>
 
-<!-- PANNEAU D'ÉDITION -->
-<div id="epanel">
-  <div class="ep-header">
-    <h3>✏️ Modifier le contenu</h3>
-    <button class="ep-close" onclick="togglePanel()">✕</button>
-  </div>
-  <div class="ep-body">
-    <div class="ep-section">Héros</div>
-    <div class="ep-field"><label>Nom de la ville</label><input id="e-name" value="Thargénésis"></div>
-    <div class="ep-field"><label>Slogan</label><input id="e-slogan" value="« L'avenir, on le bâtit ensemble »"></div>
-    <div class="ep-field"><label>Description</label><textarea id="e-desc">Une ville nouvelle, innovante et durable, pensée pour  habitants.</textarea></div>
-    <div class="ep-field"><label>Tags (séparés par des virgules)</label><input id="e-tags" value="🌱 Écologique,💡 Innovante,🤝 Inclusive,🚲 Mobilité douce"></div>
-
-    <div class="ep-section">Couleurs du site</div>
-    <div class="ep-2col">
-      <div class="ep-field"><label>Couleur 1</label><input type="color" id="e-c1" value="#1a3a4a"></div>
-      <div class="ep-field"><label>Couleur 2</label><input type="color" id="e-c2" value="#2d7a4a"></div>
-    </div>
-
-    <div class="ep-section">Statistiques</div>
-    <div class="ep-2col"><div class="ep-field"><label>Stat 1 val.</label><input id="e-s1v" value="5 000"></div><div class="ep-field"><label>Stat 1 libellé</label><input id="e-s1l" value="Habitants"></div></div>
-    <div class="ep-2col"><div class="ep-field"><label>Stat 2 val.</label><input id="e-s2v" value="2 Mds $"></div><div class="ep-field"><label>Stat 2 libellé</label><input id="e-s2l" value="Budget"></div></div>
-    <div class="ep-2col"><div class="ep-field"><label>Stat 3 val.</label><input id="e-s3v" value="2026"></div><div class="ep-field"><label>Stat 3 libellé</label><input id="e-s3l" value="Fondation"></div></div>
-    <div class="ep-2col"><div class="ep-field"><label>Stat 4 val.</label><input id="e-s4v" value="45%"></div><div class="ep-field"><label>Stat 4 libellé</label><input id="e-s4l" value="Espaces verts"></div></div>
-    <div class="ep-2col"><div class="ep-field"><label>Stat 5 val.</label><input id="e-s5v" value="3 800"></div><div class="ep-field"><label>Stat 5 libellé</label><input id="e-s5l" value="Ménages"></div></div>
-
-    <div class="ep-section">Identité</div>
-    <div class="ep-field"><label>Titre section identité</label><input id="e-id-title" value="Une ville pensée pour l'humain et la planète"></div>
-    <div class="ep-field"><label>Description identité</label><textarea id="e-id-text">Thargénésis est une ville innovante orientée vers la qualité de vie, la durabilité et l'inclusion.</textarea></div>
-    <div class="ep-field"><label>Style visuel</label><input id="e-style" value="Moderne & naturel"></div>
-    <div class="ep-field"><label>Cibles (séparées par virgule)</label><input id="e-targets" value="Familles,Jeunes actifs,Seniors,Entrepreneurs"></div>
-    <div class="ep-field"><label>Villes d'inspiration</label><input id="e-bench" value="Copenhague (mobilités douces), Singapour (smart city), Bordeaux"></div>
-    <div class="ep-field"><label>Jumelage international</label><input id="e-jumelage" value="🌍 Amsterdam — Mobilité durable et urbanisme vert"></div>
-
-    <div class="ep-section">Services</div>
-    <div class="ep-field"><label>Banque — Nom</label><input id="e-bank-name" value="ThargénésisBanque"></div>
-    <div class="ep-field"><label>Banque — Description</label><textarea id="e-bank-desc">Banque mutualiste locale orientée accessibilité et innovation.</textarea></div>
-    <div class="ep-field"><label>Assurance — Nom</label><input id="e-assur-name" value="ThargénésisAssurance"></div>
-    <div class="ep-field"><label>Assurance — Description</label><textarea id="e-assur-desc">Agence généraliste couvrant tous les besoins des habitants.</textarea></div>
-    <div class="ep-field"><label>Supermarché — Nom</label><input id="e-super-name" value="ThargénésisMarché"></div>
-    <div class="ep-field"><label>Supermarché — Description</label><textarea id="e-super-desc">Supermarché de proximité premium orienté local et bio.</textarea></div>
-
-    <div class="ep-section">Mairie</div>
-    <div class="ep-field"><label>Nom du/de la Maire</label><input id="e-maire-name" value="Conseil de gouvernance de Thargénésis"></div>
-    <div class="ep-field"><label>Type de collectivité</label><input id="e-maire-type" value="Mairie centrale avec antennes de quartier"></div>
-    <div class="ep-field"><label>Emplacement mairie</label><input id="e-maire-loc" value="Centre-ville, Place de la République"></div>
-    <div class="ep-field"><label>Innovation notable</label><textarea id="e-maire-innov">100% dématérialisée — démarches en ligne, guichet unique numérique</textarea></div>
-    <div class="ep-field"><label>Partenariats clés</label><input id="e-maire-partners" value="ThargénésisBanque · ThargénésisAssurance · Associations · Entreprises"></div>
-
-    <div class="ep-section">Communication</div>
-    <div class="ep-field"><label>Persona — Nom & âge</label><input id="e-persona-name" value="Alex, 32 ans"></div>
-    <div class="ep-field"><label>Persona — Description</label><textarea id="e-persona-desc">Jeune actif urbain, CSP+, sensible à l'écologie.</textarea></div>
-    <div class="ep-field"><label>Persona — Tags (virgule)</label><input id="e-persona-tags" value="Vélo quotidien,Télétravail,Bio & local,Culture,Famille à venir"></div>
-    <div class="ep-field"><label>Site internet</label><input id="e-com-site" value="Site officiel Thargénésis.fr — vitrine & démarches en ligne"></div>
-    <div class="ep-field"><label>Réseaux sociaux</label><input id="e-com-social" value="Instagram, TikTok, LinkedIn — storytelling de la ville"></div>
-    <div class="ep-field"><label>Ambassadeur</label><input id="e-com-ambass" value="Ambassadeur : influenceur éco / personnalité locale"></div>
-    <div class="ep-field"><label>Événement inauguration</label><input id="e-com-event" value="Festival Thargénésis Day — concerts, marchés locaux, portes ouvertes"></div>
-
-    <div class="ep-section">Pied de page</div>
-    <div class="ep-field"><label>Tagline footer</label><input id="e-footer-tagline" value="L'avenir, on le bâtit ensemble · Start Up Week 2026 · E2SE"></div>
-
-    <button class="ep-apply" onclick="applyAll()">✓ Appliquer les changements</button>
-  </div>
-</div>
+  
 
 </body>
 </html>
