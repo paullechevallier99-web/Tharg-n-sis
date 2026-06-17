@@ -223,8 +223,21 @@
   <div class="budget-total">
     <div><div class="budget-label">Budget total alloué</div><div class="budget-amount">2 000 000 000 $</div></div>
     <div style="text-align:right"><div class="budget-label">Budget restant estimé</div><div class="budget-remain">~ 34 000 000 $ disponibles</div></div>
+    
   </div>
+  <div class="budget-bar">
+  <div class="budget-fill" id="budget-fill"></div>
+</div>
+<div class="budget-info">
+  <span>Budget utilisé</span>
+  <span id="budget-percent">98.3%</span>
+</div>
 </section>
+<section>
+<button class="edit-btn" onclick="toggleMap()">🗺️ Carte</button>
+<button class="edit-btn" onclick="toggleMap3D()">🌐 3D</button>
+</section>
+
 
 <section id="services">
   <div class="section-label">Services économiques</div>
@@ -432,6 +445,18 @@
 </footer>
 
   
+<div id="map-modal" class="map-modal">
+  <div class="map-container">
+    <button onclick="closeMap()" class="close-map">✖</button>
 
+    <div id="map-2d">
+      <img src="photo/mapd.jpg" />
+    </div>
+
+    <div id="map-3d" >
+      <img src="photo/map3d.jpg" />
+    </div>
+  </div>
+</div>
 </body>
 </html>
