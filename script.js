@@ -2,7 +2,7 @@
 function s(id){
   document.getElementById(id).scrollIntoView({behavior:'smooth'})
 }
-
+ 
 // Budget
 const total = 2000000000;
 const used = total - 34000000;
