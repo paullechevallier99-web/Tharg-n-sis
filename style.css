@@ -19,7 +19,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:999;background:rgba(255,255,255,
 .nav-links a:hover{color:#111}
 .nav-log{margin-top: 1px;}
 .edit-btn{background:#111;color:#fff;border:none;padding:8px 16px;border-radius:6px;cursor:pointer;font-size:12px;font-weight:500}
-#hero{min-height:80vh;display:flex;flex-direction:column;justify-content:flex-end;padding:80px 60px 60px;position:relative;overflow:hidden;}
+#hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:80px 60px 60px;position:relative;overflow:hidden;}
 #hero-bg{position:absolute;inset:0;background:linear-gradient(135deg,#5AB46C 0%,#282E69 50%,#D26C59 100%)}
 #hero-overlay{position:absolute;inset:0;background:rgba(0,0,0,0.28)}
 .hero-content{position:relative;z-index:2;max-width:800px}
