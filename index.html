@@ -314,7 +314,9 @@
 <section id="com">
   <div class="section-label">Communication & Attractivité</div>
   <div class="section-title">Attirer talents, chercheurs et futurs citoyens</div>
-
+  <div style="display:flex;justify-content:flex-end;margin-bottom:28px;margin-top:-20px">
+  <button class="structure-btn" onclick="openBrochure()" style="background:#fff;color:#111;border:0.5px solid #e0e0e0;">📄 Ouvrir la brochure</button>
+  </div>
   <div class="com-grid">
     <div>
 
@@ -476,6 +478,21 @@
     </div>
     <div id="map-3d" style="display:none;">
       <img src="photo/map3d.jpg" style="width:70%; height:auto; object-fit:contain;" />
+    </div>
+  </div>
+</div>
+<div id="brochure-modal" class="map-modal" style="display:none">
+  <div style="position:relative;display:flex;flex-direction:column;align-items:center;gap:16px;max-width:92vw">
+    <button onclick="closeBrochure()" class="close-map" style="position:static;align-self:flex-end">✖</button>
+    <div style="display:flex;gap:24px;align-items:flex-start">
+      <div style="text-align:center">
+        <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:8px">Recto</div>
+        <img src="photo/flyers-12.png" style="max-height:80vh;max-width:42vw;width:auto;height:auto;object-fit:contain;border-radius:6px;box-shadow:0 8px 40px rgba(0,0,0,0.5)"/>
+      </div>
+      <div style="text-align:center">
+        <div style="font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.45);margin-bottom:8px">Verso</div>
+        <img src="photo/flyers-14.png" style="max-height:80vh;max-width:42vw;width:auto;height:auto;object-fit:contain;border-radius:6px;box-shadow:0 8px 40px rgba(0,0,0,0.5)"/>
+      </div>
     </div>
   </div>
 </div>
