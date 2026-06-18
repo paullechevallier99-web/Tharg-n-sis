@@ -314,3 +314,48 @@ footer{background:#0a0a0a;padding:40px 60px;display:flex;justify-content:space-b
 }
 
 
+
+
+
+
+.rs-slide{
+  flex:0 0 calc(33.333% - 11px);
+  border-radius:10px;
+  overflow:hidden;
+  position:relative;
+  background:#111;
+  border:0.5px solid #2a2a2a;
+}
+.rs-img{
+  width:100%;
+  aspect-ratio:1/1;
+  object-fit:cover;
+  display:block;
+}
+.rs-tag{
+  position:absolute;
+  top:12px;
+  left:12px;
+  background:rgba(0,0,0,0.55);
+  color:#fff;
+  font-size:11px;
+  letter-spacing:0.08em;
+  text-transform:uppercase;
+  padding:4px 10px;
+  border-radius:20px;
+  z-index:2;
+  backdrop-filter:blur(4px);
+}
+.rs-dot{
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:#333;
+  border:none;
+  cursor:pointer;
+  padding:0;
+  transition:background 0.2s;
+}
+.rs-dot.active{
+  background:#fff;
+}
