@@ -319,7 +319,8 @@ footer{background:#0a0a0a;padding:40px 60px;display:flex;justify-content:space-b
 
 
 .rs-slide{
-  flex:0 0 calc(33.333% - 11px);
+  flex:0 0 calc((100vw - 120px - 32px) / 3);
+  max-width:calc((100vw - 120px - 32px) / 3);
   border-radius:10px;
   overflow:hidden;
   position:relative;
