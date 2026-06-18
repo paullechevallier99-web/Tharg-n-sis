@@ -1,139 +1,110 @@
-// Navigation scroll fluide
+// Navigation
 function s(id){
-  document.getElementById(id).scrollIntoView({behavior:'smooth'})
+  document.getElementById(id).scrollIntoView({behavior:'smooth'});
 }
 
-// Budget
-const total = 2000000000;
-const used = total - 12000000;
-const percent = (used / total) * 100;
-
-function updateBudget(total, remaining){
-  const used = total - remaining;
-  const percent = (used / total) * 100;
-
-  document.getElementById("budget-fill").style.width = percent + "%";
-  document.getElementById("budget-percent").textContent = percent.toFixed(1) + "% utilisé";
-  document.getElementById("budget-remaining").textContent = "Restant: $" + (remaining / 1000000).toFixed(0) + "M";
-  document.getElementById("budget-display").textContent = "$" + (used / 1000000).toFixed(0) + " M";
-}
-
-// Initialiser le budget au chargement
-updateBudget(2000000000, 12000000);
-
-// Afficher/Masquer les cartes 2D et 3D
+// Carte modal
 function show2D(){
   document.getElementById("map-2d").style.display = "block";
   document.getElementById("map-3d").style.display = "none";
-  console.log("Vue 2D activée");
 }
-
 function show3D(){
   document.getElementById("map-2d").style.display = "none";
   document.getElementById("map-3d").style.display = "block";
-  console.log("Vue 3D activée");
 }
-
-// Ouvrir et fermer la modal de la carte
 function openMap(){
-  const modal = document.getElementById("map-modal");
-  modal.style.display = "flex";
-  // Afficher la 2D par défaut
+  document.getElementById("map-modal").style.display = "flex";
   show2D();
-  console.log("Modal carte ouverte");
 }
-
 function closeMap(){
-  const modal = document.getElementById("map-modal");
-  modal.style.display = "none";
-  console.log("Modal carte fermée");
+  document.getElementById("map-modal").style.display = "none";
 }
-
-// Fermer la modal en cliquant en dehors
-document.addEventListener('DOMContentLoaded', function() {
-  const modal = document.getElementById("map-modal");
-  
-  if(modal) {
-    modal.addEventListener('click', function(event) {
-      if(event.target === modal) {
-        closeMap();
-      }
-    });
-  }
-  
-  // Effet de scroll sur le bouton "EXPLORER"
-  const heroScroll = document.querySelector('.hero-scroll');
-  if(heroScroll) {
-    heroScroll.addEventListener('click', function() {
-      s('identity');
-    });
-    heroScroll.style.cursor = 'pointer';
-  }
-  const afficheModal = document.getElementById("affiche-modal");
-
-  if (afficheModal) {
-    afficheModal.addEventListener("click", function(event) {
-      if (event.target === afficheModal) {
-        closeAffiche();
-      }
-    });
-  }
-  
-  // Animation du budget au chargement
-  setTimeout(() => {
-    updateBudget(2000000000, 12000000);
-  }, 500);
-
-});
-
-// Support toucher pour le scroll
-document.addEventListener('keydown', function(event) {
-  if(event.key === 'Escape') {
-    closeMap();
-
-    closeBrochure();
-    closeAffiche();
-  }
-});
-
-
-
 
 // Brochure modal
-function openBrochure() {
+function openBrochure(){
   document.getElementById("brochure-modal").style.display = "flex";
 }
-
-function closeBrochure() {
+function closeBrochure(){
   document.getElementById("brochure-modal").style.display = "none";
 }
 
-// Fermer la brochure en cliquant en dehors
-document.addEventListener('DOMContentLoaded', function() {
-  const brochureModal = document.getElementById("brochure-modal");
-  if (brochureModal) {
-    brochureModal.addEventListener('click', function(event) {
-      if (event.target === brochureModal) {
-        closeBrochure();
-      }
-    });
-  }
-});
-
-// Fermer avec Échap (en complément de la carte)
-const _origKeydown = document.onkeydown;
-document.addEventListener('keydown', function(event) {
-  if (event.key === 'Escape') {
-    closeBrochure();
-  }
-});
-
-
 // Affiche modal
-function openAffiche() {
+function openAffiche(){
   document.getElementById("affiche-modal").style.display = "flex";
 }
-
-function closeAffiche() {
+function closeAffiche(){
   document.getElementById("affiche-modal").style.display = "none";
 }
+
+// Carrousel — déclaré globalement, assigné après DOMContentLoaded
+function slideRS(dir){
+  if(window._rsGo) window._rsGo(dir);
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+
+  // Budget
+  function updateBudget(total, remaining){
+    const used = total - remaining;
+    const percent = (used / total) * 100;
+    const fill = document.getElementById("budget-fill");
+    const pct  = document.getElementById("budget-percent");
+    const rem  = document.getElementById("budget-remaining");
+    const disp = document.getElementById("budget-display");
+    if(fill) fill.style.width = percent + "%";
+    if(pct)  pct.textContent  = percent.toFixed(1) + "% utilisé";
+    if(rem)  rem.textContent  = "Restant: $" + (remaining / 1000000).toFixed(0) + "M";
+    if(disp) disp.textContent = "$" + (used / 1000000).toFixed(0) + " M";
+  }
+  setTimeout(() => updateBudget(2000000000, 12000000), 500);
+
+  // Hero scroll
+  const heroScroll = document.querySelector('.hero-scroll');
+  if(heroScroll){
+    heroScroll.addEventListener('click', () => s('identity'));
+    heroScroll.style.cursor = 'pointer';
+  }
+
+  // Fermer modals en cliquant dehors + Échap
+  ['map-modal','brochure-modal','affiche-modal'].forEach(id => {
+    const el = document.getElementById(id);
+    if(el) el.addEventListener('click', e => { if(e.target === el) el.style.display = 'none'; });
+  });
+  document.addEventListener('keydown', e => {
+    if(e.key === 'Escape'){
+      closeMap(); closeBrochure(); closeAffiche();
+    }
+  });
+
+  // Carrousel RS
+  const track = document.getElementById('rs-track');
+  if(track){
+    const slides = track.querySelectorAll('.rs-slide');
+    const dotsContainer = document.getElementById('rs-dots');
+    const max = slides.length - 3;
+    let current = 0;
+
+    for(let i = 0; i <= max; i++){
+      const d = document.createElement('button');
+      d.className = 'rs-dot' + (i === 0 ? ' active' : '');
+      d.addEventListener('click', () => goRS(i));
+      dotsContainer.appendChild(d);
+    }
+
+    function getSlideWidth(){
+      return slides[0].getBoundingClientRect().width + 16;
+    }
+
+    function goRS(n){
+      current = Math.max(0, Math.min(n, max));
+      track.style.transform = 'translateX(-' + (current * getSlideWidth()) + 'px)';
+      dotsContainer.querySelectorAll('.rs-dot').forEach((d, i) => {
+        d.classList.toggle('active', i === current);
+      });
+    }
+
+    window._rsGo = function(dir){ goRS(current + dir); };
+    window.addEventListener('resize', () => goRS(current));
+  }
+
+});
