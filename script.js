@@ -19,7 +19,7 @@ function updateBudget(total, remaining){
 }
 
 // Initialiser le budget au chargement
-updateBudget(2000000000, 34000000);
+updateBudget(2000000000, 12000000);
 
 // Afficher/Masquer les cartes 2D et 3D
 function show2D(){
@@ -72,7 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
   
   // Animation du budget au chargement
   setTimeout(() => {
-    updateBudget(2000000000, 34000000);
+    updateBudget(2000000000, 12000000);
   }, 500);
 });
 
