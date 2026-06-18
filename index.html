@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="photo/Log.png">pa
+<link rel="icon" type="image/png" href="photo/log.png">
 <title>Thargénésis</title>
 <script src="script.js" defer></script>
 <link href="style.css" rel="stylesheet">
@@ -61,8 +61,6 @@
         <div class="section-text">Thargénésis est une ville circulaire de 6,2 km de diamètre organisée en quartiers spécialisés autour d'un centre-ville administratif. Cette structure concentrique permet une gestion optimale des ressources, une mobilité fluide et une ségrégation fonctionnelle efficace. La ville est entourée d'une ceinture agricole de 750 m garantissant l'autonomie alimentaire complète des habitants.</div>
       </div>
       <div class="structure-actions">
-        <button class="structure-btn" onclick="show2D()">📍 Vue 2D</button>
-        <button class="structure-btn" onclick="show3D()">🎯 Vue 3D</button>
         <button class="structure-btn" onclick="openMap()">🔍 Voir le plan</button>
       </div>
     </div>
@@ -411,21 +409,54 @@
           Présence dans les salons internationaux de l'innovation
         </div>
       </div>
-
-      <div class="com-block" style="margin-top:20px">
-        <h4>Événement inaugural</h4>
-
-        <div class="com-item">
-          <span class="com-item-icon">🎉</span>
-          Mars Settlement Day : retransmission Terre-Mars,
-          conférences scientifiques, concerts et ouverture des premiers quartiers
-        </div>
-      </div>
-
     </div>
 
   </div>
 </section>
+<section id="reseaux" style="background:#fff;padding:72px 60px">
+  <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:36px">
+    <div>
+      <div class="section-label" style="color:#555">Réseaux sociaux</div>
+      <div class="section-title" style="color:#111;margin-bottom:0">Nos publications</div>
+    </div>
+    <div style="display:flex;gap:10px">
+      <button onclick="slideRS(-1)" style="background:#1a1a1a;border:0.5px solid #2a2a2a;color:#fff;width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center">‹</button>
+      <button onclick="slideRS(1)" style="background:#1a1a1a;border:0.5px solid #2a2a2a;color:#fff;width:38px;height:38px;border-radius:50%;cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center">›</button>
+    </div>
+  </div>
+
+  <div style="position:relative;overflow:hidden">
+    <div id="rs-track" style="display:flex;gap:16px;transition:transform 0.45s cubic-bezier(.4,0,.2,1)">
+      <div class="rs-slide">
+        <div class="rs-tag">Inauguration</div>
+        <img src="photo/inau1.png" class="rs-img"/>
+      </div>
+      <div class="rs-slide">
+        <div class="rs-tag">Inauguration</div>
+        <img src="photo/inau2.png" class="rs-img"/>
+      </div>
+      <div class="rs-slide">
+        <div class="rs-tag">Inauguration</div>
+        <img src="photo/inau3.png" class="rs-img"/>
+      </div>
+      <div class="rs-slide">
+        <div class="rs-tag">Inauguration</div>
+        <img src="photo/inau4.png" class="rs-img"/>
+      </div>
+      <div class="rs-slide">
+        <div class="rs-tag">Projet</div>
+        <img src="photo/proj1.png" class="rs-img"/>
+      </div>
+      <div class="rs-slide">
+        <div class="rs-tag">Projet</div>
+        <img src="photo/proj2.png" class="rs-img"/>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:flex;justify-content:center;gap:6px;margin-top:20px" id="rs-dots"></div>
+</section>
+
 <section id="future">
   <div class="section-label">Vision à long terme</div>
   <div class="section-title">Thargénésis en 2225</div>
