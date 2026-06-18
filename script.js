@@ -5,7 +5,7 @@ function s(id){
 
 // Budget
 const total = 2000000000;
-const used = total - 34000000;
+const used = total - 12000000;
 const percent = (used / total) * 100;
 
 function updateBudget(total, remaining){
