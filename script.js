@@ -85,3 +85,31 @@ document.addEventListener('keydown', function(event) {
 
 
 
+// Brochure modal
+function openBrochure() {
+  document.getElementById("brochure-modal").style.display = "flex";
+}
+
+function closeBrochure() {
+  document.getElementById("brochure-modal").style.display = "none";
+}
+
+// Fermer la brochure en cliquant en dehors
+document.addEventListener('DOMContentLoaded', function() {
+  const brochureModal = document.getElementById("brochure-modal");
+  if (brochureModal) {
+    brochureModal.addEventListener('click', function(event) {
+      if (event.target === brochureModal) {
+        closeBrochure();
+      }
+    });
+  }
+});
+
+// Fermer avec Échap (en complément de la carte)
+const _origKeydown = document.onkeydown;
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    closeBrochure();
+  }
+});
