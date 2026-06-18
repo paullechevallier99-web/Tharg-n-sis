@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="photo/Log.png">
+<link rel="icon" type="image/png" href="photo/log.png">
 <title>Thargénésis</title>
 <script src="script.js" defer></script>
 <link href="style.css" rel="stylesheet">
@@ -164,7 +164,7 @@
       <div class="pop-row"><span class="pop-row-label">Couples avec enfants</span><span class="pop-row-val">35%</span></div>
       <div class="pop-row"><span class="pop-row-label">Monoparentales</span><span class="pop-row-val">10%</span></div>
       <div style="margin-top:12px;padding-top:10px;border-top:0.5px solid #2a2a2a">
-        <div class="pop-row"><span class="pop-row-label">Revenu moyen</span><span class="pop-row-val">2 100 $/mois</span></div>
+        <div class="pop-row"><span class="pop-row-label">Revenu moyen</span><span class="pop-row-val">3 064,2 T/mois</span></div>
         <div class="pop-row"><span class="pop-row-label">Panier mensuel</span><span class="pop-row-val">1 250 $</span></div>
         <div class="pop-row"><span class="pop-row-label">Tramway autonome</span><span class="pop-row-val">60%</span></div>
         <div class="pop-row"><span class="pop-row-label">Marche sous dôme</span><span class="pop-row-val">25%</span></div>
@@ -277,7 +277,7 @@
       <div class="svc-name" id="bank-name">Caisse Commune de Thargénésis</div>
       <div class="svc-type">Agence bancaire</div>
       <div class="svc-desc" id="bank-desc">Banque mutualiste chargée de gérer les bons de ressources, l'épargne communautaire et la redistribution des ressources vitales.</div>
-      <div class="svc-offers"><div class="svc-offer">🎟️ Attribution des bons de ressources</div><div class="svc-offer">🏦 Épargne de rationnement</div><div class="svc-offer">🔁 Gestion des échanges</div><div class="svc-offer">🤝 Redistribution équitable</div></div>
+      <div class="svc-offers"><div class="svc-offer">🎟️ Attribution des bons de ressources</div><div class="svc-offer">🏦 Épargne de rationnement</div><div class="svc-offer">🔁 Gestion des échanges</div><div class="svc-offer">💱 Bureau de change</div></div>
     </div>
     <div class="svc-card">
       <div class="svc-icon">🛡️</div>
@@ -286,11 +286,15 @@
       <div class="svc-desc" id="assur-desc">Mutuelle de protection Martienne couvrant tous les risques des habitants et des professionnels de la ville.</div>
       <div class="svc-offers"><div class="svc-offer">🏠 Protection du dôme</div><div class="svc-offer">🤖 Risques technologiques</div><div class="svc-offer">🛰️ Risques Spatiaux</div><div class="svc-offer">🔒 Cyber-risques</div></div>
     </div>
-    <div class="svc-offers">
-      <div class="svc-offer">🌿 Produits bio & locaux</div>
+    <div class="svc-card">
+      <div class="svc-icon">🌱</div>
+      <div class="svc-name" id="assur-name">Thagrotech</div>
+      <div class="svc-type">Agriculture et production alimentaire</div>
+      <div class="svc-desc" id="assur-desc">Réseau de fermes hydroponiques et serres martiennes assurant l'autonomie alimentaire de la ville grâce à une production locale, durable et entièrement contrôlée sous dôme.</div>
+      <div class="svc-offers">      <div class="svc-offer">🌿 Produits bio & locaux</div>
       <div class="svc-offer">🎟️ Paiement par bons de ressources</div>
       <div class="svc-offer">🧑‍🌾 Producteurs & agriculteurs locaux</div>
-      <div class="svc-offer">📦 Gestion des stocks en temps réel</div>
+      <div class="svc-offer">📦 Gestion des stocks en temps réel</div></div>
     </div>
   </div>
 </section>
@@ -320,38 +324,13 @@
 <section id="com">
   <div class="section-label">Communication & Attractivité</div>
   <div class="section-title">Attirer talents, chercheurs et futurs citoyens</div>
-  <div style="display:flex;justify-content:flex-end;margin-bottom:28px;margin-top:-20px">
-  <button class="structure-btn" onclick="openBrochure()" style="background:#fff;color:#111;border:0.5px solid #e0e0e0;">📄 Ouvrir la brochure</button>
-  <button class="structure-btn" onclick="openAffiche()" style="background:#fff;color:#111;border:0.5px solid #e0e0e0;">📄 Ouvrir l'affiche</button>
 
-  </div>
   <div class="com-grid">
+
+    <!-- COLONNE GAUCHE -->
     <div>
 
       <div class="com-block">
-        <h4>Persona cœur de cible</h4>
-        <div class="persona-card">
-          <div class="persona-name">
-            Dr. Maya Laurent, 34 ans
-          </div>
-
-          <div class="persona-desc">
-            Ingénieure en systèmes durables. Souhaite participer à la
-            construction de la première ville permanente sur Mars.
-            Recherche un environnement innovant, sécurisé et multiculturel.
-          </div>
-
-          <div class="persona-tags">
-            <span class="persona-tag">Recherche</span>
-            <span class="persona-tag">Innovation</span>
-            <span class="persona-tag">Développement durable</span>
-            <span class="persona-tag">Coopération internationale</span>
-            <span class="persona-tag">Exploration spatiale</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="com-block" style="margin-top:24px">
         <h4>Objectifs de communication</h4>
 
         <div class="com-item">
@@ -375,8 +354,20 @@
         </div>
       </div>
 
+      <!-- BOUTONS -->
+      <div style="display:flex;gap:12px;justify-content:center;margin-top:120px;color:#fff;margin-left:-200px;">
+        <button class="structure-btn" onclick="openBrochure()" style="color:#111;background:#fff">
+          📄 Ouvrir le flyer
+        </button>
+
+        <button class="structure-btn" onclick="openAffiche()" style="color:#111;background:#fff">
+          📄 Ouvrir l'affiche
+        </button>
+      </div>
+
     </div>
 
+    <!-- COLONNE DROITE -->
     <div>
 
       <div class="com-block">
@@ -433,6 +424,7 @@
       </div>
 
     </div>
+
   </div>
 </section>
 <section id="future">
