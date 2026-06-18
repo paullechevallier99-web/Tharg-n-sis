@@ -13,6 +13,7 @@
 <nav>
   <div class="nav-logo" id="nav-name"><img src="photo/fondbl.png" height=15px width=15px class="nav-log"/> THARGÉNÉSIS</div>
   <div class="nav-links">
+    <a onclick="s('structure-ville')">Plan de la ville</a>
     <a onclick="s('identity')">Identité</a>
     <a onclick="s('population')">Population</a>
     <a onclick="s('infra')">Infrastructures</a>
@@ -50,7 +51,32 @@
     <div class="stat"><div class="stat-n" id="s5v">10 000</div><div class="stat-l" id="s5l">Habitants en 2225</div></div>
   </div>
 </section>
+<section id="structure-ville">
+    <div class="structure-header">
+      <div>
+        <div class="section-label">Découvrez la ville</div>
+        <div class="section-title">Architecture urbaine de Thargénésis</div>
+        <div class="section-text">Thargénésis est une ville circulaire de 6,2 km de diamètre organisée en quartiers spécialisés autour d'un centre-ville administratif. Cette structure concentrique permet une gestion optimale des ressources, une mobilité fluide et une ségrégation fonctionnelle efficace. La ville est entourée d'une ceinture agricole de 750 m garantissant l'autonomie alimentaire complète des habitants.</div>
+      </div>
+      <div class="structure-actions">
+        <button class="structure-btn" onclick="show2D()">📍 Vue 2D</button>
+        <button class="structure-btn" onclick="show3D()">🎯 Vue 3D</button>
+        <button class="structure-btn" onclick="openMap()">🔍 Voir le plan</button>
+      </div>
+    </div>
 
+    <div style="margin-top:40px;padding:20px;background:#f8f7f4;border-radius:12px">
+      <div style="font-size:13px;line-height:1.8;color:#555">
+        <h3 style="font-size:18px;margin-bottom:12px;color:#111;font-family:'Coolvetica',sans-serif">Quartiers spécialisés :</h3>
+        <p><strong>🏢 Centre administratif</strong> — Cœur de la ville avec l'hôtel de ville, centre de recherche, casino et services publics centralisés</p>
+        <p style="margin-top:10px"><strong>🎓 Quartier Éducation</strong> — École, lycée, université et complexe sportif pour former les générations futures</p>
+        <p style="margin-top:10px"><strong>🏘️ Quartier Résidentiel</strong> — Quartiers d'habitation mixte avec maisons individuelles et immeubles collectifs (60% du parc)</p>
+        <p style="margin-top:10px"><strong>🛍️ Quartier Affaires</strong> — Marché, restaurants, centre commercial et services commerciaux</p>
+        <p style="margin-top:10px"><strong>🌿 Fermes périphériques</strong> — Nord, Sud, Est, Ouest : fermes hydroponiques autonomes assurant 100% de l'alimentation</p>
+        <p style="margin-top:10px"><strong>🚚 Transports</strong> — 3 lignes de tramway autonome (20 km), pistes cyclables (20 km), 100% mobilité douce sans véhicules à moteur</p>
+      </div>
+    </div>
+</section>
 <section id="identity">
   <div>
     <div class="section-label">Identité de la ville</div>
@@ -233,10 +259,7 @@
   <span id="budget-percent">98.3%</span>
 </div>
 </section>
-<section>
-<button class="edit-btn" onclick="toggleMap()">🗺️ Carte</button>
-<button class="edit-btn" onclick="toggleMap3D()">🌐 3D</button>
-</section>
+
 
 
 <section id="services">
@@ -448,13 +471,12 @@
 <div id="map-modal" class="map-modal">
   <div class="map-container">
     <button onclick="closeMap()" class="close-map">✖</button>
-
-    <div id="map-2d">
-      <img src="photo/mapd.jpg" />
+    
+    <div id="map-2d" style="display:block; width:100%; display:flex; align-items:center; justify-content:center;">
+      <img src="photo/plan2d.png" style="width:110%; height:auto; object-fit:contain;" />
     </div>
-
-    <div id="map-3d" >
-      <img src="photo/map3d.jpg" />
+    <div id="map-3d" style="display:none;">
+      <img src="photo/map3d.jpg" style="width:70%; height:auto; object-fit:contain;" />
     </div>
   </div>
 </div>
