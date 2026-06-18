@@ -69,19 +69,33 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     heroScroll.style.cursor = 'pointer';
   }
+  const afficheModal = document.getElementById("affiche-modal");
+
+  if (afficheModal) {
+    afficheModal.addEventListener("click", function(event) {
+      if (event.target === afficheModal) {
+        closeAffiche();
+      }
+    });
+  }
   
   // Animation du budget au chargement
   setTimeout(() => {
     updateBudget(2000000000, 12000000);
   }, 500);
+
 });
 
 // Support toucher pour le scroll
 document.addEventListener('keydown', function(event) {
   if(event.key === 'Escape') {
     closeMap();
+
+    closeBrochure();
+    closeAffiche();
   }
 });
+
 
 
 
@@ -113,3 +127,13 @@ document.addEventListener('keydown', function(event) {
     closeBrochure();
   }
 });
+
+
+// Affiche modal
+function openAffiche() {
+  document.getElementById("affiche-modal").style.display = "flex";
+}
+
+function closeAffiche() {
+  document.getElementById("affiche-modal").style.display = "none";
+}
